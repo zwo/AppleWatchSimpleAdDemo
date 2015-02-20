@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="13F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Main" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Show Ad" id="Tfh-YJ-2ib">
+                            <connections>
+                                <segue destination="3cR-aT-SG5" kind="modal" id="cql-Ng-lWB"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+        </scene>
+        <!--Ad-->
+        <scene sceneID="Tyt-fQ-Rym">
+            <objects>
+                <controller identifier="watchAdController" title="Ad" id="3cR-aT-SG5" customClass="WQWatchAdController">
+                    <items>
+                        <imageView height="130" alignment="left" image="wqad" id="eHt-qu-neC"/>
+                        <group width="1" alignment="left" id="dTP-eK-0JD">
+                            <items>
+                                <button width="0.5" alignment="left" title="Ignore" id="pnO-Vu-Gnw">
+                                    <connections>
+                                        <action selector="ignoreAd" destination="3cR-aT-SG5" id="zp4-pU-84h"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Detail" id="dnZ-mo-lLJ">
+                                    <color key="backgroundColor" red="0.094117647060000004" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="openAd" destination="3cR-aT-SG5" id="xXe-UM-6a1"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="381" y="142.25"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.87058823529999996" green="0.37254901959999998" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+</document>
